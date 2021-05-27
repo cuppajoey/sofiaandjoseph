@@ -6,6 +6,7 @@
     --color-embers: #682714;
     --color-sunrise: #EE9639;
     --color-ash: #D6C1A8;
+    --color-black: #051115;
 }
 
 * {
@@ -17,6 +18,18 @@ body {
     padding: 0;
     font-family: 'Poppins', Helvetica, sans-serif;
     font-size: 16px;
+}
+
+.text-ash {
+    color: var(--color-ash);
+}
+
+.text-embers {
+    color: var(--color-embers);
+}
+
+.text-sunrise {
+    color: var(--color-sunrise);
 }
 
 #starry-night {
@@ -49,13 +62,30 @@ body {
     height: 100%;
 }
 
-h1 {
+h1, h2, h3, h4 {
     color: var(--color-embers);
     font-family: 'beloved-script', cursive;
-    font-size: 9rem;
-    margin: 0 0 50px;
+    margin: 0 0 3rem;
     line-height: 1;
+}
+
+h1 {
+    font-size: 9rem;
     text-shadow: 0 1px #d6562b;
+}
+
+h2 {
+    font-size: 7.5rem;
+    color: var(--color-embers);
+}
+
+.subtitle {
+    font-family: 'beloved-sans', 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
 }
 
 nav a {
@@ -87,12 +117,12 @@ nav a {
 }
 
 .midground {
-    opacity: 0.4;
+    /* opacity: 0.4; */
     z-index: 9;
 }
 
 .background {
-    opacity: 0.15;
+    /* opacity: 0.15; */
     z-index: 8;
 }
 
@@ -126,4 +156,32 @@ nav a {
     bottom: -2em;
     transform: scale(0.3);
     transform-origin: bottom;
+}
+
+#story {
+    background-color: var(--color-black);
+    color: var(--color-ash);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#venue {
+    background-color: var(--color-embers);
+    color: var(--color-ash);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#registry {
+    background-color: var(--color-ash);
+    color: var(--color-midnight);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#contact {
+    background-color: var(--color-midnight);
+    color: var(--color-ash);
+    text-align: center;
+    padding: 100px 20px;
 }
