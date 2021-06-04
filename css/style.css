@@ -238,6 +238,45 @@ nav a:not(:last-child)::after {
     padding: 100px 20px;
 }
 
+.registry-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 75px auto 50px;
+    max-width: 1080px;
+}
+
+.registry-logos > a {
+    position: relative;
+}
+
+.registry-logos > a::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-midnight);
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 5px);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 150ms ease-in-out;
+}
+
+.registry-logos > a:hover::after {
+    transform: scale(0.8);
+}
+
+.registry-logos img {
+    width: auto;
+    max-height: 50px;
+    max-width: 550px;
+}
+
+.registry-logos img.target {
+    max-height: 75px;
+}
+
 #contact {
     background-color: var(--color-midnight);
     color: var(--color-ash);
