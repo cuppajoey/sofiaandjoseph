@@ -163,32 +163,32 @@ nav a:not(:last-child)::after {
 
 .t-one {
     left: -9em;
-    bottom: -12em;
+    bottom: -200px;
 }
 
 .t-two {
     right: -14em;
-    bottom: -7em;
+    bottom: -125px;
     transform: scale(1.2) rotateY(180deg);
 }
 
 .t-three {
     left: 2em;
-    bottom: -4em;
+    bottom: -85px;
     transform: scale(0.5) rotateY(180deg);
     transform-origin: bottom;
 }
 
 .t-four {
     right: 0;
-    bottom: -4em;
+    bottom: -85px;
     transform: scale(0.6);
     transform-origin: bottom;
 }
 
 .t-five {
     left: 9em;
-    bottom: -2em;
+    bottom: -40px;
     transform: scale(0.3);
     transform-origin: bottom;
 }

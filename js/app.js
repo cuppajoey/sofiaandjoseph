@@ -105,9 +105,21 @@
 
 $(window).scroll(function() {
     imageScrollingStrip();
+    treeScrolling();
 });
 
 function imageScrollingStrip() {
-    var wScroll = $(window).scrollTop() / 1.5;
+    var wScroll = $(window).scrollTop() / 1.35;
     $('.image-strip').css('top','-'+ wScroll +'px');
+}
+
+function treeScrolling() {
+    var foreground = $(window).scrollTop() * 0.25;
+    var midground = $(window).scrollTop() * 0.1;
+    var background = $(window).scrollTop() * 0.05;
+    $('.t-one').css('bottom','calc(-200px + '+ foreground +'px)');
+    $('.t-two').css('bottom','calc(-125px + '+ foreground +'px)');
+    $('.t-three').css('bottom','calc(-85px + '+ midground +'px)');
+    $('.t-four').css('bottom','calc(-85px + '+ midground +'px)');
+    $('.t-five').css('bottom','calc(-40px + '+ background +'px)');
 }
