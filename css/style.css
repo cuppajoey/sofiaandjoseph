@@ -120,7 +120,8 @@ a:hover {
     z-index: 3;
     left: 90%;
     top: 90%;
-    animation: moonrise 2.5s linear 0s 1 normal forwards;
+    /* animation: moonrise 2.5s linear 0s 1 normal forwards; */
+    animation: moonrise 1s linear 1.5s 1 normal forwards;
 }
 
 .moon svg {
@@ -517,11 +518,23 @@ nav a:hover::before {
 
 @keyframes moonrise {
     from {
+        left: 4%;
+        top: 30%;
+    }
+    33% {
+        left: 8%;
+        top: 20%;
+    }
+    /* 50% {
         left: 10%;
-        top: 50%;
+        top: 17%;
+    } */
+    66% {
+        left: 12%;
+        top: 14%;
     }
     to {
-        left: 10%;
-        top: 18%;
+        left: 15%;
+        top: 10%;
     }
 }
