@@ -10,7 +10,8 @@
 }
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -83,16 +84,26 @@ a:hover {
     width: 100%;
     height: 100vh;
     background-color: var(--color-dusk);
+    background-image: -o-radial-gradient(bottom, ellipse, var(--color-dusk) 0%, var(--color-midnight) 65%);
     background-image: radial-gradient(ellipse at bottom, var(--color-dusk) 0%, var(--color-midnight) 65%);
     position: relative;
     overflow: hidden;
 }
 
 #intro .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     position: relative;
     z-index: 10;
@@ -121,7 +132,8 @@ a:hover {
     left: 90%;
     top: 90%;
     /* animation: moonrise 2.5s linear 0s 1 normal forwards; */
-    animation: moonrise 1s linear 1.5s 1 normal forwards;
+    -webkit-animation: moonrise 1s linear 1.5s 1 normal forwards;
+            animation: moonrise 1s linear 1.5s 1 normal forwards;
 }
 
 .moon svg {
@@ -133,21 +145,39 @@ a:hover {
 }
 
 .title {
-    animation: fadeInUp 1s ease-in-out 2s 1 normal forwards;
-    transform: translateY(-25px);
+    -webkit-animation: fadeInUp 1s ease-in-out 2s 1 normal forwards;
+            animation: fadeInUp 1s ease-in-out 2s 1 normal forwards;
+    -webkit-transform: translateY(-25px);
+        -ms-transform: translateY(-25px);
+            transform: translateY(-25px);
     opacity: 0;
     overflow: visible;
     display: block;
     width: 100%;
 }
 
-@keyframes fadeInUp {
+@-webkit-keyframes fadeInUp {
     from {
-        transform: translateY(-25px);
+        -webkit-transform: translateY(-25px);
+                transform: translateY(-25px);
         opacity: 0;
     }
     to {
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        -webkit-transform: translateY(-25px);
+                transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
         opacity: 1;
     }
 }
@@ -166,11 +196,13 @@ nav a {
 }
 
 nav a:first-of-type {
-    animation-delay: 2.75s;
+    -webkit-animation-delay: 2.75s;
+            animation-delay: 2.75s;
 }
 
 nav a:last-of-type {
-    animation-delay: 3.25s;
+    -webkit-animation-delay: 3.25s;
+            animation-delay: 3.25s;
 }
 
 .slide-reveal {
@@ -178,9 +210,23 @@ nav a:last-of-type {
     width: 0px;
     overflow: hidden; */
     opacity: 0;
-    animation: fadeIn 1000ms ease-in-out;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
+    -webkit-animation: fadeIn 1000ms ease-in-out;
+            animation: fadeIn 1000ms ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        /* width: 0px; */
+        opacity: 0;
+    }
+    to {
+        /* width: 190px; */
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
@@ -214,12 +260,20 @@ nav a::before {
     bottom: -10px;
     left: calc(50% - 5px);
     border-radius: 50%;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: -webkit-transform 150ms ease-in-out;
+    transition: -webkit-transform 150ms ease-in-out;
+    -o-transition: transform 150ms ease-in-out;
     transition: transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
 }
 
 nav a:hover::before {
-    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
 }
 
 .trees {
@@ -257,28 +311,40 @@ nav a:hover::before {
 .t-two {
     right: -14em;
     bottom: -125px;
-    transform: scale(1.2) rotateY(180deg);
+    -webkit-transform: scale(1.2) rotateY(180deg);
+            transform: scale(1.2) rotateY(180deg);
 }
 
 .t-three {
     left: 2em;
     bottom: -85px;
-    transform: scale(0.5) rotateY(180deg);
-    transform-origin: bottom;
+    -webkit-transform: scale(0.5) rotateY(180deg);
+            transform: scale(0.5) rotateY(180deg);
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
 }
 
 .t-four {
     right: 0;
     bottom: -85px;
-    transform: scale(0.6);
-    transform-origin: bottom;
+    -webkit-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6);
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
 }
 
 .t-five {
     left: -6em;
     bottom: -70px;
-    transform: scale(0.5);
-    transform-origin: bottom;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
 }
 
 .t-six {
@@ -296,7 +362,9 @@ nav a:hover::before {
 }
 
 #story .grid {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 25px 450px;
     grid-template-columns: 1fr 450px;
     grid-gap: 25px;
     max-width: 1200px;
@@ -332,14 +400,20 @@ nav a:hover::before {
 .details {
     max-width: 1080px;
     margin: 40px auto 25px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 400px 50px 1fr;
     grid-template-columns: 400px 1fr;
     grid-gap: 50px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .venue-details {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     font-size: 1.2rem;
     position: relative;
@@ -372,13 +446,18 @@ nav a:hover::before {
     height: 400px;
     border-radius: 100%;
     overflow: hidden;
-    transform: translateZ(0);
-    box-shadow: 0px 0px 0 14px var(--color-embers), 0px 0px 0 15px var(--color-midnight);
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-box-shadow: 0px 0px 0 14px var(--color-embers), 0px 0px 0 15px var(--color-midnight);
+            box-shadow: 0px 0px 0 14px var(--color-embers), 0px 0px 0 15px var(--color-midnight);
+    -webkit-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
 }
 
 .map-window:hover {
-    box-shadow: 0px 0px 0 14px var(--color-embers), 0px 0px 0 15px var(--color-sunrise);
+    -webkit-box-shadow: 0px 0px 0 14px var(--color-embers), 0px 0px 0 15px var(--color-sunrise);
+            box-shadow: 0px 0px 0 14px var(--color-embers), 0px 0px 0 15px var(--color-sunrise);
 }
 
 #venue-map {
@@ -397,6 +476,8 @@ nav a:hover::before {
     padding: 12px 10px;
     margin: 5px;
     width: 50px;
+    -webkit-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     cursor: pointer;
 }
@@ -414,9 +495,14 @@ nav a:hover::before {
 }
 
 .registry-logos {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin: 75px auto 50px;
     max-width: 1080px;
 }
@@ -434,12 +520,20 @@ nav a:hover::before {
     bottom: -20px;
     left: calc(50% - 5px);
     border-radius: 50%;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: -webkit-transform 150ms ease-in-out;
+    transition: -webkit-transform 150ms ease-in-out;
+    -o-transition: transform 150ms ease-in-out;
     transition: transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
 }
 
 .registry-logos > a:hover::after {
-    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
 }
 
 .registry-logos img {
@@ -521,6 +615,29 @@ nav a:hover::before {
         top: 20%;
     }
 } */
+
+@-webkit-keyframes moonrise {
+    from {
+        left: 4%;
+        top: 30%;
+    }
+    33% {
+        left: 8%;
+        top: 20%;
+    }
+    /* 50% {
+        left: 10%;
+        top: 17%;
+    } */
+    66% {
+        left: 12%;
+        top: 14%;
+    }
+    to {
+        left: 15%;
+        top: 10%;
+    }
+}
 
 @keyframes moonrise {
     from {
