@@ -115,22 +115,41 @@ a:hover {
     background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221925.047%22%20height%3D%22862.107%22%20viewBox%3D%220%200%201925.047%20862.107%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22radial-gradient%22%20cx%3D%220.484%22%20cy%3D%220.771%22%20r%3D%220.376%22%20gradientTransform%3D%22matrix(1%2C%20-0.004%2C%200.007%2C%201.778%2C%20-0.006%2C%20-0.598)%22%20gradientUnits%3D%22objectBoundingBox%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23264955%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230d1d22%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20id%3D%22Path_39%22%20data-name%3D%22Path%2039%22%20d%3D%22M1924.641%2C1019.531c-109.243-134.15-296.237-160.543-523.976-27.3s-466.3%2C294.655-591.209%2C270.3S488.031%2C1013.7%2C384.584%2C956.18%2C109.773%2C830.875.4%2C1053.5c-1.81%2C2.1%2C0%2C697.867%2C0%2C697.867l1924.242%2C10.227Z%22%20transform%3D%22translate(0.406%20-899.486)%22%20fill%3D%22url(%23radial-gradient)%22%2F%3E%0A%3C%2Fsvg%3E%0A");
 }
 
-#sofia {
-    max-width: 400px;
-}
-
 .moon {
     position: absolute;
     z-index: 3;
     left: 90%;
     top: 90%;
-    animation: moonrise 2.5s linear 1s 1 normal forwards;
+    animation: moonrise 2.5s linear 0s 1 normal forwards;
 }
 
 .moon svg {
     width: 90px;
 }
 
+#sofia {
+    max-width: 400px;
+}
+
+.title {
+    animation: fadeInUp 1s ease-in-out 2s 1 normal forwards;
+    transform: translateY(-25px);
+    opacity: 0;
+    overflow: visible;
+    display: block;
+    width: 100%;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 nav a {
     color: var(--color-ash);
@@ -145,18 +164,34 @@ nav a {
     display: inline-block;
 }
 
-/* .slide-reveal {
-    white-space: nowrap;
-    width: 0px;
-    overflow: hidden;
-    animation: linearwipe 6s steps(60, end);
+nav a:first-of-type {
+    animation-delay: 2.75s;
 }
 
-@keyframes linearwipe {
+nav a:last-of-type {
+    animation-delay: 3.25s;
+}
+
+.slide-reveal {
+    /* white-space: nowrap;
+    width: 0px;
+    overflow: hidden; */
+    opacity: 0;
+    animation: fadeIn 1000ms ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes fadeIn {
     from {
-        width: 0;
+        /* width: 0px; */
+        opacity: 0;
     }
-} */
+    to {
+        /* width: 190px; */
+        opacity: 1;
+    }
+}
 
 nav a:not(:last-child)::after {
     content: '';
@@ -167,6 +202,23 @@ nav a:not(:last-child)::after {
     position: absolute;
     top: calc(50% - 3px);
     right: -70px;
+}
+
+nav a::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-stardust);
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 5px);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 150ms ease-in-out;
+}
+
+nav a:hover::before {
+    transform: scale(0.8);
 }
 
 .trees {
@@ -229,7 +281,7 @@ nav a:not(:last-child)::after {
 }
 
 .t-six {
-    right: 5em;
+    right: 0;
     bottom: -190px;
     max-height: 450px;
 }
@@ -416,7 +468,7 @@ nav a:not(:last-child)::after {
     padding: 100px 20px;
 }
 
-@keyframes moonrise {
+/* @keyframes moonrise {
     from {
         left: 100%;
         top: 60%;
@@ -460,5 +512,16 @@ nav a:not(:last-child)::after {
     to {
         left: 10%;
         top: 20%;
+    }
+} */
+
+@keyframes moonrise {
+    from {
+        left: 10%;
+        top: 50%;
+    }
+    to {
+        left: 10%;
+        top: 18%;
     }
 }
