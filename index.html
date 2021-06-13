@@ -57,16 +57,29 @@
         <section id="venue">
             <div class="wrapper">
                 <div class="details">
-                    <div class="map-window">
-                        <div id="venue-map"></div>
+                    <div>
+                        <div class="map-window">
+                            <div id="venue-map"></div>
+                        </div>
+                        <div class="map-controls">
+                            <span id="zoom-in">+</span>
+                            <span id="zoom-out">-</span>
+                        </div>
                     </div>
                     <div>
-                        <h2 class="text-sunrise">The Venue</h2>
-                        <p class="venue-details">Our guests are invited to witness the start of this new chapter in our lives. Our ceremony and reception will be held on<br />
-                        <span>November 28th, 2021</span><br />
-                        at the<br />
-                        <span>Brake &amp; Clutch Warehouse</span><br />
-                        3601 Main Street, Dallas, TX 75226</p>
+                        <span class="subtitle">The Venue</span>
+                        <h2 class="text-sunrise">Brake &amp; Clutch</h2>
+                        <p>Our guests are invited to witness the start of this new chapter in our lives. Our ceremony and reception will be held at the Brake & Clutch Warehouse.</p>
+                        <div class="venue-details">
+                            <div>
+                                <span>Date</span>
+                                November 28th, 2021
+                            </div>
+                            <div>
+                                <span>Address</span>
+                                3601 Main Street<br />Dallas, TX 75226
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -103,7 +116,7 @@
             function initMap() {
                 var mapOptions = {
                     // Zoom Level
-                    zoom: 14,
+                    zoom: 13,
 
                     // The latitude and longitude to center the map
                     center: new google.maps.LatLng(32.7858486,-96.7768174),
@@ -115,7 +128,19 @@
                     styles: [{"featureType":"all","elementType":"geometry.fill","stylers":[{"weight":"2.00"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"color":"#9c9c9c"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#d6c1a8"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"color":"#22424d"}]},{"featureType":"administrative","elementType":"labels.icon","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#22424d"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#22424d"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#18282e"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#22424d"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#d6c1a8"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#22424d"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"simplified"},{"invert_lightness":true},{"saturation":"-100"},{"gamma":"4.95"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#0a1c22"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#070707"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]}]
                 };
 
+                var zoomIn = document.getElementById("zoom-in");
+                var zoomOut = document.getElementById("zoom-out");
+
                 map = new google.maps.Map(document.getElementById("venue-map"), mapOptions);
+
+                google.maps.event.addDomListener(zoomIn, 'click', function() {
+                    map.setZoom(map.getZoom() + 1);
+                });
+
+                // Setup the click event listener - zoomOut
+                google.maps.event.addDomListener(zoomOut, 'click', function() {
+                    map.setZoom(map.getZoom() - 1);
+                }); 
 
                 // Let's also add a marker while we're at it
                 var marker = new google.maps.Marker({

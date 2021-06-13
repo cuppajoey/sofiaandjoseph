@@ -36,7 +36,7 @@ h1 {
 h2 {
     font-size: 7.5rem;
     color: var(--color-embers);
-    margin: 0 0 2rem;
+    margin: 0 0 1.5rem;
 }
 
 .subtitle {
@@ -268,6 +268,10 @@ nav a:not(:last-child)::after {
     padding: 100px 20px;
 }
 
+#venue h2 {
+    font-size: 7rem;
+}
+
 .details {
     max-width: 1080px;
     margin: 40px auto 25px;
@@ -277,17 +281,33 @@ nav a:not(:last-child)::after {
     align-items: center;
 }
 
-.details span {
+.venue-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.2rem;
+    position: relative;
+    margin: 35px 0;
+}
+
+.venue-details::after {
+    content: '';
+    display: block;
+    width: 1px;
+    border-left: 1px dotted var(--color-midnight);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+.venue-details span {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 1.5rem;
-    border-bottom: 1px dotted var(--color-sunrise);
-    margin: 5px auto;
-    display: inline-block;
-}
-
-.details p {
-    font-size: 1.2rem;
+    border-bottom: 1px dotted var(--color-midnight);
+    color: var(--color-sunrise);
+    margin: 10px auto;
+    display: block;
 }
 
 .map-window {
@@ -297,11 +317,36 @@ nav a:not(:last-child)::after {
     overflow: hidden;
     transform: translateZ(0);
     box-shadow: 0px 0px 0 14px var(--color-embers), 0px 0px 0 15px var(--color-midnight);
+    transition: all 150ms ease-in-out;
+}
+
+.map-window:hover {
+    box-shadow: 0px 0px 0 14px var(--color-embers), 0px 0px 0 15px var(--color-sunrise);
 }
 
 #venue-map {
     width: 100%;
     height: calc(100% + 20px);
+}
+
+.map-controls {
+    margin-top: 30px;
+}
+
+.map-controls span {
+    display: inline-block;
+    border: 1px solid var(--color-midnight);
+    color: var(--color-midnight);
+    padding: 12px 10px;
+    margin: 5px;
+    width: 50px;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+}
+
+.map-controls span:hover {
+    border-color: var(--color-surise);
+    color: var(--color-sunrise);
 }
 
 #registry {
