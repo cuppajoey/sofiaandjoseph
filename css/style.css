@@ -469,6 +469,12 @@ nav a:hover::before {
     padding: 100px 20px;
 }
 
+#contact p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* @keyframes moonrise {
     from {
         left: 100%;
