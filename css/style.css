@@ -39,6 +39,10 @@ h2 {
     margin: 0 0 1.5rem;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .subtitle {
     font-family: 'beloved-sans', 'Poppins', sans-serif;
     font-weight: 700;
@@ -393,6 +397,16 @@ nav a:not(:last-child)::after {
 
 .registry-logos img.target {
     max-height: 75px;
+}
+
+#registry p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#registry p a {
+    color: var(--color-embers);
 }
 
 #contact {
