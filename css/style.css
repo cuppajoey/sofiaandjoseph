@@ -361,6 +361,10 @@ nav a:hover::before {
     overflow: hidden;
 }
 
+#story p {
+    line-height: 2.5;
+}
+
 #story .grid {
     display: -ms-grid;
     display: grid;
