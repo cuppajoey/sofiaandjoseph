@@ -428,7 +428,7 @@ nav a:hover::before {
     content: '';
     display: block;
     width: 1px;
-    border-left: 1px dotted var(--color-midnight);
+    border-left: 1px solid var(--color-midnight);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -439,7 +439,7 @@ nav a:hover::before {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 1.5rem;
-    border-bottom: 1px dotted var(--color-midnight);
+    border-bottom: 1px solid var(--color-midnight);
     color: var(--color-sunrise);
     margin: 10px auto;
     display: block;
