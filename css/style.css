@@ -414,6 +414,12 @@ nav a:hover::before {
             align-items: center;
 }
 
+.details > div:first-child {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+}
+
 .venue-details {
     display: -ms-grid;
     display: grid;
@@ -663,5 +669,139 @@ nav a:hover::before {
     to {
         left: 15%;
         top: 10%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    nav a {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    nav a::before {
+        content: none;
+    }
+    nav a::after {
+        content: none !important;
+    }
+
+    .t-one {
+        left: -80%;
+    }
+    .t-two {
+        right: -80%
+    }
+    .t-three {
+        left: -40%
+    }
+    .t-four {
+        right: -40%
+    }
+    .t-five {
+        display: none;
+    }
+    .t-six {
+        bottom: -70px;
+        max-height: 320px;
+    }
+
+    #intro .mountains {
+        max-height: 80%;
+        background-position-x: 31%;
+    }
+
+    #story .grid {
+        -ms-grid-columns: 1fr 0;
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
+    #story .grid > div:first-child {
+        position: relative;
+        z-index: 5;
+    }
+
+    .scrolling-imgs {
+        z-index: 2;
+        opacity: 0.3;
+        mix-blend-mode: luminosity;
+    }
+
+    .image-strip {
+        height: auto;
+        width: 100%;
+        margin: 0;
+    }
+
+    .image-strip img {
+        width: 100%;
+    }
+
+    .image-strip img:nth-child(2) {
+        display: none;
+    }
+
+    h2 {
+        font-size: 4.5rem;
+    }
+
+    #story h2 {
+        color: var(--color-sunrise);
+    }
+
+    #story p {
+        font-size: 15px;
+    }
+
+    #venue {
+        padding: 30px 20px;
+    }
+
+    #venue h2 {
+        font-size: 4rem;
+    }
+
+    .details {
+        display: block;
+    }
+
+    .details > div:first-child {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+    }
+
+    .venue-details {
+        font-size: 1rem;
+        margin: 25px 0 50px;
+    }
+
+    .venue-details span {
+        font-size: 1rem;
+    }
+
+    .map-window {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+    }
+
+    #registry {
+        padding: 50px 20px;
+    }
+
+    .registry-logos {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin: 25px auto;
+    }
+
+    .registry-logos img {
+        width: 100%;
+        margin: 20px 0px;
     }
 }
