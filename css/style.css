@@ -31,7 +31,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 9rem;
+    font-size: 6.1875rem;
     text-shadow: 0 1px #d6562b;
 }
 
@@ -69,10 +69,14 @@ a:hover {
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .site-header {
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .site-header .wrapper {
@@ -148,6 +152,23 @@ nav a:hover::before {
         -ms-transform: scale(0.8);
             transform: scale(0.8);
 }
+
+/* Hero Sections */
+.hero {
+    max-height: 760px;
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page-title {
+    margin-bottom: -21px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
 
 .title {
     -webkit-animation: fadeInUp 1s ease-in-out 2s 1 normal forwards;
