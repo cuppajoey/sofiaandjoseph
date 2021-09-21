@@ -24,7 +24,7 @@ body {
 
 
 h1, h2, h3, h4 {
-    color: var(--color-embers);
+    color: var(--color-fog);
     font-family: 'Bely Display', serif;
     margin: 0 0 3rem;
     line-height: 1;
@@ -32,7 +32,6 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 6.1875rem;
-    text-shadow: 0 1px #d6562b;
 }
 
 h2 {
@@ -155,8 +154,11 @@ nav a:hover::before {
 
 /* Hero Sections */
 .hero {
-    max-height: 760px;
-    height: 60vh;
+    background-color: var(--color-fog);
+    background-size: cover;
+    background-position: center;
+    max-height: 800px;
+    height: 70vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
