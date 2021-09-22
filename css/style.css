@@ -120,7 +120,7 @@ a:hover {
 
 /* Buttons */
 .btn {
-    padding: 0.5rem 2rem 0.2rem;
+    padding: 1rem 2rem 0.6rem;
     font-family: 'beloved-sans', 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
@@ -128,6 +128,9 @@ a:hover {
     background-color: var(--color-dusk);
     color: var(--color-fog);
     line-height: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
 .btn.btn-primary {
