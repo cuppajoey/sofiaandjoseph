@@ -82,6 +82,16 @@ a:hover {
     margin-bottom: 8px;
 }
 
+.body-large {
+    font-family: 'beloved-sans', 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
 .bg-fog {
     background-color: var(--color-fog);
 }
@@ -285,6 +295,13 @@ nav a:hover::before {
 }
 .faq .card {
     margin-bottom: -150px;
+}
+
+
+/* Countdown */
+.countdown {
+    text-align: center;
+    padding: 55px 0;
 }
 
 /* Old design */
