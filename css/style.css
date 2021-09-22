@@ -120,17 +120,19 @@ a:hover {
 
 /* Buttons */
 .btn {
+    background-color: var(--color-dusk);
+    color: #ffffff;
+    display: inline-block;
     padding: 1rem 2rem 0.6rem;
     font-family: 'beloved-sans', 'Poppins', sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: var(--color-dusk);
-    color: var(--color-fog);
+    text-align: center;
+    letter-spacing: 5px;
     line-height: 1;
     margin-top: 10px;
     margin-bottom: 10px;
-    display: inline-block;
 }
 
 .btn.btn-primary {
@@ -357,7 +359,12 @@ nav a:hover::before {
     margin-top: 12px;
     font-size: 18px;
 }
-  
+
+
+/* FP Gallery CTA */
+.gallery {
+    padding: 100px;
+}
 
 /* Old design */
 
