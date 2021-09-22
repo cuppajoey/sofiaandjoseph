@@ -8,6 +8,7 @@
     --color-ash: #D6C1A8;
     --color-black: #051115;
     --color-fog: #E0E0E0;
+    --color-starlight: #f7f7f7;
 }
 
 * {
@@ -51,6 +52,17 @@ a:hover {
     text-decoration: none;
 }
 
+.text-link {
+    font-size: 1.25rem;
+    color: var(--color-dusk);
+    text-decoration: none;
+    transition: all 100ms ease-in-out;
+}
+
+.text-link:hover {
+    color: var(--color-stardust);
+}
+
 .subtitle {
     font-family: 'beloved-sans', 'Poppins', sans-serif;
     font-weight: 700;
@@ -72,6 +84,10 @@ a:hover {
 
 .bg-fog {
     background-color: var(--color-fog);
+}
+
+.bg-starlight {
+    background-color: var(--color-starlight);
 }
 
 .text-ash {
@@ -123,6 +139,30 @@ a:hover {
 .btn-group .btn {
     width: 50%;
     padding: 1.1rem 2rem 0.7rem;
+}
+
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.grid.cols_3 {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 65px 25px 50px;
+    text-align: center;
+}
+
+.card a {
+    margin-top: auto;
 }
 
 
@@ -237,6 +277,17 @@ nav a:hover::before {
     margin-top: 0;
 }
 
+
+/* FP FAQs */
+.faq {
+    padding-top: 90px;
+    margin-bottom: 250px;
+}
+.faq .card {
+    margin-bottom: -150px;
+}
+
+/* Old design */
 
 .title {
     -webkit-animation: fadeInUp 1s ease-in-out 2s 1 normal forwards;
