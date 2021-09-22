@@ -304,6 +304,58 @@ nav a:hover::before {
     padding: 55px 0;
 }
 
+
+/* Coundown Timer */
+#jdsc_countdown {
+    width: 100%;
+    max-width: 960px;
+    margin: 25px auto;
+    text-align: center;
+    min-height: 111px;
+    position: relative;
+}
+.jdsc_digits {
+    padding: 20px 40px;
+    display: inline-block;
+    font-family: 'Bely Display', sans-serif;
+    font-size: 6.875rem;
+    margin: 0 5px;
+    text-align: center;
+    /* display: none; */
+    color: var(--color-embers);
+    line-height: 1;
+}
+.jdsc_digits > em {
+    display: block;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-family: "Poppins", "Helvetica", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+#jdsc_countdown .jdsc_loading_icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    max-width: 30px;
+}
+#jdsc_countdown.loaded .jdsc_digits {
+    display: inline-block;
+}
+#jdsc_countdown.loaded .jdsc_loading_icon {
+    display: none;
+}
+
+#jdsc_title {
+    display: block;
+    margin-top: 12px;
+    font-size: 18px;
+}
+  
+
 /* Old design */
 
 .title {
