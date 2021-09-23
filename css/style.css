@@ -104,20 +104,26 @@ a:hover {
 .text-ash {
     color: var(--color-ash);
 }
-
 .text-embers {
     color: var(--color-embers);
 }
-
 .text-sunrise {
     color: var(--color-sunrise);
+}
+.text-white {
+    color: #ffffff;
 }
 
 /* Utilities Classes */
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 18px;
+}
+.wrapper-narrow {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 18px;
 }
 
 .text-left {
@@ -289,11 +295,15 @@ nav a:hover::before {
     overflow: hidden;
 }
 
+.hero .wrapper-narrow {
+    width: 100%;
+}
+
 .page-title {
     margin-bottom: -6px;
     text-transform: uppercase;
     line-height: 0.75;
-    font-size: 6rem;
+    font-size: 5.9rem;
 }
 
 .intro {
