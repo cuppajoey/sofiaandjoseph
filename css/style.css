@@ -331,10 +331,11 @@ nav a:hover::before {
     text-align: center;
     min-height: 111px;
     position: relative;
+    display: flex;
 }
 .jdsc_digits {
     padding: 20px 40px;
-    display: inline-block;
+    display: block;
     font-family: 'Bely Display', sans-serif;
     font-size: 6.875rem;
     margin: 0 5px;
