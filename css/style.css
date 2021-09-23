@@ -345,12 +345,16 @@ nav a:hover::before {
     background-color: var(--color-fog);
     background-size: cover;
     background-position: center;
-    max-height: 800px;
+    max-height: 450px;
     height: 70vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     overflow: hidden;
+}
+
+.home .hero {
+    max-height: 800px;
 }
 
 .hero .wrapper-narrow {
