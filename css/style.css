@@ -332,6 +332,7 @@ nav a:hover::before {
     min-height: 111px;
     position: relative;
     display: flex;
+    justify-content: center;
 }
 .jdsc_digits {
     padding: 20px 40px;
@@ -343,11 +344,12 @@ nav a:hover::before {
     position: relative;
     color: var(--color-embers);
     line-height: 1;
+    width: 25%;
 }
 .jdsc_digits:not(:last-child)::after {
     content: ":";
     position: absolute;
-    right: -10%;
+    right: -19px;
     top: calc(50% - 65px);
 }
 .jdsc_digits > em {
@@ -383,7 +385,7 @@ nav a:hover::before {
 
 /* FP Gallery CTA */
 .gallery {
-    padding: 100px;
+    padding: 100px 0;
 }
 
 
