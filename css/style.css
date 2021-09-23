@@ -27,17 +27,18 @@ body {
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-dusk);
     font-family: 'Bely Display', serif;
-    margin: 0 0 1em;
-    line-height: 1;
+    margin: 1em 0 0.35em;
+    line-height: 1.2;
 }
 
 h1, .heading-size-1 {
-    font-size: 6.1875rem;
+    font-size: 6rem;
     color: var(--color-fog);
 }
 
 h2, .heading-size-2 {
-    font-size: 4.125rem;
+    font-size: 4rem;
+    color: var(--color-embers);
 }
 
 h3, .heading-size-3 {
@@ -46,6 +47,16 @@ h3, .heading-size-3 {
 
 h4, .heading-size-4 {
     font-size: 1.8333rem;
+}
+
+p {
+    line-height: 2;
+    font-size: 1.1rem;
+}
+
+ul, ol {
+    line-height: 2;
+    font-size: 1.1rem;
 }
 
 a:hover {
@@ -79,7 +90,9 @@ a:hover {
     letter-spacing: 5px;
     text-transform: uppercase;
     display: block;
-    margin-bottom: 8px;
+    margin: 0.5em 0 1em;
+    line-height: 1.5;
+
 }
 
 .body-large {
@@ -396,6 +409,12 @@ nav a:hover::before {
 /* FP Gallery CTA */
 .gallery {
     padding: 100px 0;
+}
+
+
+/* Int Pages */
+.page-content {
+    padding: 35px 0 100px;
 }
 
 
