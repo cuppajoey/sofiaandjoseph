@@ -150,6 +150,9 @@ address {
 .text-embers {
     color: var(--color-embers);
 }
+.text-ash {
+    color: var(--color-ash);
+}
 .text-sunrise {
     color: var(--color-sunrise);
 }
