@@ -49,6 +49,10 @@ h4, .heading-size-4 {
     font-size: 1.8333rem;
 }
 
+h5, .heading-size-5 {
+    font-size: 1.5rem;
+}
+
 p {
     line-height: 2;
     font-size: 1.1rem;
@@ -105,6 +109,12 @@ a:hover {
     margin-bottom: 8px;
 }
 
+.font-body {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-weight: normal;
+    margin-bottom: 0.5em;
+}
+
 /* Color Classes */
 .bg-fog {
     background-color: var(--color-fog);
@@ -147,6 +157,10 @@ a:hover {
 }
 .text-right {
     text-align: right;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
 }
 
 /* Buttons */
@@ -199,6 +213,10 @@ a:hover {
     grid-template-columns: repeat(3, 1fr)
 }
 
+.grid.gap-15 {
+    grid-gap: 15px;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -210,6 +228,11 @@ a:hover {
 .card .card-title {
     margin-top: 0;
     margin-bottom: 1.3em;
+}
+
+.card p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
 }
 
 .card a {
@@ -422,6 +445,13 @@ nav a:hover::before {
     padding: 35px 0 100px;
 }
 
+.hotels .card {
+    padding: 35px 18px 25px;
+}
+
+.hotels .card a {
+    font-size: 0.9rem;
+}
 
 /* Site footer */
 .site-footer {
