@@ -65,6 +65,10 @@ ul, ol {
     font-size: 1.1rem;
 }
 
+a {
+    color: var(--color-embers);
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -149,6 +153,9 @@ address {
 }
 .text-embers {
     color: var(--color-embers);
+}
+.text-dusk {
+    color: var(--color-dusk);
 }
 .text-ash {
     color: var(--color-ash);
@@ -251,6 +258,11 @@ address {
 .card .card-title {
     margin-top: 0;
     margin-bottom: 1.3em;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 40px;
 }
 
 .card p {
