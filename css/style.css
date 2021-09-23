@@ -207,6 +207,11 @@ a:hover {
     text-align: center;
 }
 
+.card .card-title {
+    margin-top: 0;
+    margin-bottom: 1.3em;
+}
+
 .card a {
     margin-top: auto;
 }
@@ -320,7 +325,7 @@ nav a:hover::before {
 }
 
 .intro {
-    padding: 35px 0;
+    padding: 55px 0;
     text-align: center;
 }
 
@@ -331,8 +336,8 @@ nav a:hover::before {
 
 /* FP FAQs */
 .faq {
-    padding-top: 90px;
-    margin-bottom: 250px;
+    padding-top: 0px;
+    margin-bottom: 200px;
 }
 .faq .card {
     margin-bottom: -150px;
