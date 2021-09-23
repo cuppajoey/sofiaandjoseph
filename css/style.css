@@ -339,9 +339,15 @@ nav a:hover::before {
     font-size: 6.875rem;
     margin: 0 5px;
     text-align: center;
-    /* display: none; */
+    position: relative;
     color: var(--color-embers);
     line-height: 1;
+}
+.jdsc_digits:not(:last-child)::after {
+    content: ":";
+    position: absolute;
+    right: -10%;
+    top: calc(50% - 65px);
 }
 .jdsc_digits > em {
     display: block;

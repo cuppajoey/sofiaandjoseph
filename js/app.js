@@ -201,10 +201,10 @@ $('a[href*="#"]')
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             if (distance > 0) {
-                document.getElementById("jdsc_days").innerHTML = days;
-                document.getElementById("jdsc_hours").innerHTML = hours;
-                document.getElementById("jdsc_min").innerHTML = minutes;
-                document.getElementById("jdsc_sec").innerHTML = seconds;
+                document.getElementById("jdsc_days").innerHTML = (days < 10) ? "0" + days : days;
+                document.getElementById("jdsc_hours").innerHTML = (hours < 10) ? "0" + hours : hours;
+                document.getElementById("jdsc_min").innerHTML = (minutes < 10) ? "0" + minutes : minutes;
+                document.getElementById("jdsc_sec").innerHTML = (seconds < 10) ? "0" + seconds : seconds;
                 countdown.classList.add("loaded");
             } else {
                 clearInterval(x);
