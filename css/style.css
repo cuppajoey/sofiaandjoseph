@@ -92,6 +92,7 @@ a:hover {
     margin-bottom: 8px;
 }
 
+/* Color Classes */
 .bg-fog {
     background-color: var(--color-fog);
 }
@@ -112,10 +113,21 @@ a:hover {
     color: var(--color-sunrise);
 }
 
+/* Utilities Classes */
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
 }
 
 /* Buttons */
@@ -278,9 +290,10 @@ nav a:hover::before {
 }
 
 .page-title {
-    margin-bottom: -21px;
+    margin-bottom: -6px;
     text-transform: uppercase;
-    line-height: 1;
+    line-height: 0.75;
+    font-size: 6rem;
 }
 
 .intro {
