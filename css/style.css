@@ -262,6 +262,10 @@ a:hover {
     width: 100%;
 }
 
+.site-header.header-light nav a {
+    color: #fff;
+}
+
 
 /* Navigation */
 nav a {
