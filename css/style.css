@@ -21,6 +21,8 @@ body {
     padding: 0;
     font-family: 'Poppins', Helvetica, sans-serif;
     font-size: 16px;
+    font-weight: 300;
+    color: var(--color-dusk);
 }
 
 
@@ -46,7 +48,7 @@ h3, .heading-size-3 {
 }
 
 h4, .heading-size-4 {
-    font-size: 1.8333rem;
+    font-size: 2rem;
 }
 
 h5, .heading-size-5 {
@@ -65,6 +67,17 @@ ul, ol {
 
 a:hover {
     text-decoration: none;
+}
+
+.separator {
+    display: block;
+    border-bottom: 1px solid var(--color-fog);
+    margin: 2.5rem 0;
+}
+
+.separator.half-line {
+    width: 50%;
+    min-width: 150px;
 }
 
 .text-link {
