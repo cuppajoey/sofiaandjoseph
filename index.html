@@ -12,13 +12,15 @@
     <body>
         <header class="site-header">
             <div class="wrapper">
-                <div class="branding"><img src="./img/sj-logo.svg"></div>
+                <div class="branding">
+                    <a href="/"><img src="./img/sj-logo.svg"></a>
+                </div>
                 <nav class="site-nav">
-                    <a href="#">Event Details</a>
-                    <a href="#">Hotels</a>
-                    <a href="#">Registry</a>
+                    <a href="details.html">Event Details</a>
+                    <a href="details.html/#accommodations">Hotels</a>
+                    <a href="registry.html">Registry</a>
                     <a href="#">Gallery</a>
-                    <a href="#">RSVP</a>
+                    <a href="rsvp.html">RSVP</a>
                 </nav>
             </div>
         </header>
@@ -90,11 +92,11 @@
                 <div class="footer-nav-container">
                     <img src="./img/monogram.svg" class="monogram" />
                     <nav class="site-nav footer-nav">
-                        <a href="#">Event Details</a>
-                        <a href="#">Hotels</a>
-                        <a href="#">Registry</a>
+                        <a href="details.html">Event Details</a>
+                        <a href="details.html/#accommodations">Hotels</a>
+                        <a href="registry.html">Registry</a>
                         <a href="#">Gallery</a>
-                        <a href="#">RSVP</a>
+                        <a href="rsvp.html">RSVP</a>
                     </nav>
                 </div>
             </div>
@@ -102,46 +104,5 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/app.js"></script>
-        <!-- <script type="text/javascript">
-            let map;
-
-            function initMap() {
-                var mapOptions = {
-                    // Zoom Level
-                    zoom: 13,
-
-                    // The latitude and longitude to center the map
-                    center: new google.maps.LatLng(32.7858486,-96.7768174),
-
-                    disableDefaultUI: true,
-
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [{"featureType":"all","elementType":"geometry.fill","stylers":[{"weight":"2.00"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"color":"#9c9c9c"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#d6c1a8"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"color":"#22424d"}]},{"featureType":"administrative","elementType":"labels.icon","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#22424d"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#22424d"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#18282e"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#22424d"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#d6c1a8"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#22424d"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"simplified"},{"invert_lightness":true},{"saturation":"-100"},{"gamma":"4.95"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#0a1c22"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#070707"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]}]
-                };
-
-                var zoomIn = document.getElementById("zoom-in");
-                var zoomOut = document.getElementById("zoom-out");
-
-                map = new google.maps.Map(document.getElementById("venue-map"), mapOptions);
-
-                google.maps.event.addDomListener(zoomIn, 'click', function() {
-                    map.setZoom(map.getZoom() + 1);
-                });
-
-                // Setup the click event listener - zoomOut
-                google.maps.event.addDomListener(zoomOut, 'click', function() {
-                    map.setZoom(map.getZoom() - 1);
-                }); 
-
-                // Let's also add a marker while we're at it
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(32.7858486,-96.7768174),
-                    map: map,
-                    title: 'Brake & Clutch'
-                });
-            }
-        </script>
-        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOIanYXoJ8SCptLYFOpZeO-JzojjY28LA&callback=initMap"></script> -->
     </body>
 </html>
