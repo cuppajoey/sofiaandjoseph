@@ -227,3 +227,35 @@ function updateCountdown(countDownDate) {
     document.getElementById("jdsc_sec").innerHTML = (seconds < 10) ? "0" + seconds : seconds;
     countdown.classList.add("loaded");
 }
+
+// 
+// Handle form conditionals
+// 
+let isPlusOne = false;
+let plusOneRadios = document.querySelectorAll('');
+
+// 
+// Handle contact form submissions
+// 
+let form = document.getElementById("rsvp-form");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+
+    let status = document.getElementById("formResponse");
+    let data = new FormData(event.target);
+    
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        status.innerHTML = "Thanks for reaching out, I'll get back to you as soon as I can!";
+        form.reset()
+    }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form. Do you mind trying again?"
+    });
+}
+form.addEventListener("submit", handleSubmit);

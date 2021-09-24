@@ -538,6 +538,43 @@ nav a:hover::before {
     font-size: 0.9rem;
 }
 
+/* RSVP Form */
+fieldset {
+    margin: 5px 0 15px;
+    border-style: dotted;
+    padding: 10px 20px 20px;
+}
+label {
+    display: block;
+}
+label.label-inline {
+    display: inline;
+}
+input, select, textarea {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: "Poppins", "Helvetica", sans-serif;
+    line-height: 1.5;
+    padding: 8px 12px;
+    margin: 5px 0 10px;
+}
+
+.radio-group {
+    margin: 5px 0 10px;
+}
+.radio-group .label-sm {
+    margin-right: 10px;
+}
+.radio-field input {
+    display: inline;
+    width: auto;
+}
+
+input[type="submit"] {
+    border: none;
+}
+
 /* Site footer */
 .site-footer {
     background-image: url(../img/footer-rooftop.jpg);
