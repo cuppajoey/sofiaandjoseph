@@ -231,8 +231,15 @@ function updateCountdown(countDownDate) {
 // 
 // Handle form conditionals
 // 
-let isPlusOne = false;
-let plusOneRadios = document.querySelectorAll('');
+let guestTwo = document.getElementById("guest2");
+let plusOneRadios = document.querySelectorAll('.plus-one');
+plusOneRadios.forEach( radio => radio.addEventListener("change", () => {
+    if (radio.value === "yes") {
+        guestTwo.style.display = "block";
+    } else {
+        guestTwo.style.display = "none";
+    }
+}));
 
 // 
 // Handle contact form submissions
