@@ -546,6 +546,7 @@ fieldset {
 }
 label {
     display: block;
+    font-weight: bold;
 }
 label.label-inline {
     display: inline;
@@ -565,17 +566,31 @@ input, select, textarea {
 }
 .radio-group .label-sm {
     margin-right: 15px;
+    display: block;
+    font-weight: bold;
 }
 .radio-field {
     padding-right: 15px;
+    display: block;
 }
 .radio-field input {
     display: inline;
     width: auto;
 }
+.radio-field label {
+    font-weight: normal;
+}
 
 input[type="submit"] {
     border: none;
+    cursor: pointer;
+}
+
+.notice {
+    background-color: var(--color-fog);
+    padding: 10px;
+    text-align: center;
+    display: none;
 }
 
 /* Site footer */

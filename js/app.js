@@ -1,7 +1,7 @@
-$(window).scroll(function() {
-    // imageScrollingStrip();
-    // treeScrolling();
-});
+// $(window).scroll(function() {
+//     // imageScrollingStrip();
+//     // treeScrolling();
+// });
 
 
 /**
@@ -72,19 +72,41 @@ async function handleSubmit(event) {
     event.preventDefault();
 
     let status = document.getElementById("formResponse");
+    status.style.display = "none";
+
     let data = new FormData(event.target);
+    let attending = data.get("attending");
+    let meal = data.get("meal-preference");
+    let guest = data.get("plus-one");
+
+    let message;
+    if (attending === "yes") {
+        message = "Thank you for your RSVP! We can't wait to see you there!";
+    } else {
+        message = "Thank you for your RSVP! We're sorry you can't make it, but we understand!";
+    }
+
+    if (! attending || !meal || !guest) {
+        status.innerHTML = "Please fill in the RSVP fields before submitting.";
+        status.style.display = "block";
+        return false;
+    }
+    
     
     fetch(event.target.action, {
         method: form.method,
         body: data,
         headers: {
-            'Accept': 'application/json'
+            "Accept": "application/json"
         }
     }).then(response => {
-        status.innerHTML = "Thanks for reaching out, I'll get back to you as soon as I can!";
+        status.innerHTML = message;
+        status.style.display = "block";
         form.reset()
+        form.style.display = "none";
     }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form. Do you mind trying again?"
+        status.innerHTML = "Oops! There was a problem submitting your rsvp. Do you mind trying again?"
+        status.style.display = "block";
     });
 }
 form.addEventListener("submit", handleSubmit);
