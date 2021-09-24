@@ -564,7 +564,10 @@ input, select, textarea {
     margin: 5px 0 10px;
 }
 .radio-group .label-sm {
-    margin-right: 10px;
+    margin-right: 15px;
+}
+.radio-field {
+    padding-right: 15px;
 }
 .radio-field input {
     display: inline;
