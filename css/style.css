@@ -28,7 +28,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-dusk);
-    font-family: 'Bely Display', serif;
+    font-family: 'bely-display', serif;
     margin: 1em 0 0.35em;
     line-height: 1.2;
 }
@@ -431,7 +431,7 @@ nav a:hover::before {
 .jdsc_digits {
     padding: 20px 40px;
     display: block;
-    font-family: 'Bely Display', sans-serif;
+    font-family: 'bely-display', sans-serif;
     font-size: 6.875rem;
     margin: 0 5px;
     text-align: center;
