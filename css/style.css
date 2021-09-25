@@ -693,6 +693,7 @@ input[type="submit"] {
     line-height: 1.5;
     margin: 0 0 30px;
     position: relative;
+    opacity: 0;
 }
 
 .mobile-menu a span {
@@ -705,6 +706,36 @@ input[type="submit"] {
 .mobile-menu-container .monogram {
     max-width: 75px;
     margin-top: auto;
+    opacity: 0;
+}
+
+
+/* Animate mobile menu */
+.menu-open a {
+    -webkit-animation: fadeInUp 1s ease-in-out 0.25s 1 normal forwards;
+            animation: fadeInUp 1s ease-in-out 0.25s 1 normal forwards;
+    /* -webkit-transform: translateY(25px);
+        -ms-transform: translateY(25px);
+            transform: translateY(25px); */
+}
+.menu-open a:nth-child(2) {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+}
+.menu-open a:nth-child(3) {
+    -webkit-animation-delay: 0.75s;
+            animation-delay: 0.75s;
+}
+.menu-open a:nth-child(4) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+}
+.menu-open img {
+    -webkit-animation: fadeInUp 1s ease-in-out 1.5s 1 normal forwards;
+            animation: fadeInUp 1s ease-in-out 1.5s 1 normal forwards;
+    -webkit-transform: translateY(25px);
+        -ms-transform: translateY(25px);
+            transform: translateY(25px);
 }
 
 /* Old design */
@@ -723,8 +754,8 @@ input[type="submit"] {
 
 @-webkit-keyframes fadeInUp {
     from {
-        -webkit-transform: translateY(-25px);
-                transform: translateY(-25px);
+        -webkit-transform: translateY(25px);
+                transform: translateY(25px);
         opacity: 0;
     }
     to {
@@ -736,8 +767,8 @@ input[type="submit"] {
 
 @keyframes fadeInUp {
     from {
-        -webkit-transform: translateY(-25px);
-                transform: translateY(-25px);
+        -webkit-transform: translateY(25px);
+                transform: translateY(25px);
         opacity: 0;
     }
     to {
