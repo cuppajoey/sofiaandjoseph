@@ -643,6 +643,11 @@ input[type="submit"] {
     pointer-events: none;
 }
 
+.mobile-menu-container.menu-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .mobile-menu {
     display: flex;
     flex-direction: column;

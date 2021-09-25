@@ -5,6 +5,25 @@
 
 
 /**
+ *  Handle mobile menu toggle
+ */
+let openMenu = document.getElementById("menu-toggle");
+openMenu.addEventListener("click", openMobileMenu);
+
+let closeMenu = document.getElementById("close-menu");
+closeMenu.addEventListener("click", closeMobileMenu);
+
+function openMobileMenu() {
+    let mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.classList.add("menu-open");
+}
+
+function closeMobileMenu() {
+    let mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.classList.remove("menu-open");
+}
+
+/**
  *  Initialize the countdown timer
  */
 var countdown = document.getElementById("jdsc_countdown");
@@ -109,7 +128,10 @@ async function handleSubmit(event) {
         status.style.display = "block";
     });
 }
-form.addEventListener("submit", handleSubmit);
+
+if (form) {
+    form.addEventListener("submit", handleSubmit);
+}
 
 
 /**
