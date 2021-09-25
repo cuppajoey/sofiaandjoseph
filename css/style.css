@@ -234,6 +234,12 @@ address {
     background-color: var(--color-embers);
 }
 
+.btn.btn-disabled {
+    background-color: var(--color-fog);
+    color: var(--color-dusk);
+    pointer-events: none;
+}
+
 .btn-group {
     display: -webkit-box;
     display: -ms-flexbox;
