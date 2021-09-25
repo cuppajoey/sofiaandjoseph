@@ -857,6 +857,67 @@ input[type="submit"] {
 
 
 
+@media screen and (max-width: 899px) {
+    .grid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .grid.cols_3 {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    #menu-toggle {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    body:not(.home) #menu-toggle .bar {
+        background-color: #ffffff;
+    }
+
+    .site-header .site-nav {
+        display: none;
+    }
+
+    .faq {
+        padding-bottom: 50px;
+        margin-bottom: 0;
+    }
+    .faq .card {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 850px) {
+    #jdsc_countdown {
+        margin: 0 auto;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .jdsc_digits {
+        padding: 10px;
+        font-size: 2.875rem;
+    }
+
+    .jdsc_digits:not(:last-child)::after {
+        right: -10px;
+        top: calc(50% - 35px);
+    }
+
+    .gallery {
+        overflow: hidden;
+        padding: 100px 0;
+    }
+
+    .media-stack {
+        -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+                transform: scale(0.9);
+    }
+}
 @media screen and (max-width: 600px) {
 
     h1, .heading-size-1 {
@@ -917,16 +978,6 @@ input[type="submit"] {
         font-size: 1rem;
     }
 
-    .grid {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    }
-
-    .grid.cols_3 {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    }
-
     .card {
         padding: 45px 25px 30px;
     }
@@ -941,20 +992,6 @@ input[type="submit"] {
         padding-top: 5px;
     }
 
-    #menu-toggle {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-
-    body:not(.home) #menu-toggle .bar {
-        background-color: #ffffff;
-    }
-
-    .site-header .site-nav {
-        display: none;
-    }
-
     .hero {
         max-height: 300px;
     }
@@ -966,41 +1003,6 @@ input[type="submit"] {
     .intro {
         padding: 35px 0;
         text-align: left;
-    }
-
-    .faq {
-        padding-bottom: 50px;
-        margin-bottom: 0;
-    }
-    .faq .card {
-        margin-bottom: 0;
-    }
-
-    #jdsc_countdown {
-        margin: 0 auto;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-    }
-    .jdsc_digits {
-        padding: 10px;
-        font-size: 2.875rem;
-    }
-
-    .jdsc_digits:not(:last-child)::after {
-        right: -10px;
-        top: calc(50% - 35px);
-    }
-
-    .gallery {
-        overflow: hidden;
-        padding: 100px 0;
-    }
-
-    .media-stack {
-        -webkit-transform: scale(0.9);
-            -ms-transform: scale(0.9);
-                transform: scale(0.9);
     }
 
     .page-content {
