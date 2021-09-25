@@ -293,6 +293,10 @@ address {
     max-height: 89px;
 }
 
+.site-header .branding a {
+    display: block;
+}
+
 .site-header .branding img {
     width: 100%;
 }
@@ -613,19 +617,44 @@ input[type="submit"] {
 /* Mobile Menu */
 #menu-toggle {
     width: 30px;
-    height: 20px;
+    height: 22px;
     cursor: pointer;
     position: relative;
     display: none;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    margin-right: 7px;
 }
 #menu-toggle .bar {
     width: 100%;
     height: 2px;
     background: var(--color-embers);
     display: block;
+}
+
+#close-menu {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    top: 30px;
+    right: 25px;
+}
+#close-menu .bar {
+    width: 100%;
+    height: 2px;
+    background: var(--color-embers);
+    display: block;
+    transform: rotate(45deg);
+    transform-origin: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+#close-menu .bar:last-child {
+    transform: rotate(-45deg);
 }
 
 .mobile-menu-container {
@@ -814,6 +843,7 @@ input[type="submit"] {
 
     .site-header .branding img {
         max-width: 175px;
+        padding-top: 5px;
     }
 
     #menu-toggle {
