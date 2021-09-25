@@ -714,9 +714,6 @@ input[type="submit"] {
 .menu-open a {
     -webkit-animation: fadeInUp 1s ease-in-out 0.25s 1 normal forwards;
             animation: fadeInUp 1s ease-in-out 0.25s 1 normal forwards;
-    /* -webkit-transform: translateY(25px);
-        -ms-transform: translateY(25px);
-            transform: translateY(25px); */
 }
 .menu-open a:nth-child(2) {
     -webkit-animation-delay: 0.5s;
@@ -731,26 +728,11 @@ input[type="submit"] {
             animation-delay: 1s;
 }
 .menu-open img {
-    -webkit-animation: fadeInUp 1s ease-in-out 1.5s 1 normal forwards;
-            animation: fadeInUp 1s ease-in-out 1.5s 1 normal forwards;
-    -webkit-transform: translateY(25px);
-        -ms-transform: translateY(25px);
-            transform: translateY(25px);
+    -webkit-animation: fadeIn 1s ease-in-out 1.75s 1 normal forwards;
+            animation: fadeIn 1s ease-in-out 1.75s 1 normal forwards;
 }
 
-/* Old design */
-
-.title {
-    -webkit-animation: fadeInUp 1s ease-in-out 2s 1 normal forwards;
-            animation: fadeInUp 1s ease-in-out 2s 1 normal forwards;
-    -webkit-transform: translateY(-25px);
-        -ms-transform: translateY(-25px);
-            transform: translateY(-25px);
-    opacity: 0;
-    overflow: visible;
-    display: block;
-    width: 100%;
-}
+/* Animations */
 
 @-webkit-keyframes fadeInUp {
     from {
@@ -873,7 +855,7 @@ input[type="submit"] {
     }
 
     .site-header .branding img {
-        max-width: 175px;
+        max-width: 200px;
         padding-top: 5px;
     }
 
@@ -890,7 +872,11 @@ input[type="submit"] {
     }
 
     .home .hero {
-        max-height: 440px;
+        max-height: 450px;
+    }
+
+    .intro {
+        padding: 35px 0;
     }
 
     .faq {
