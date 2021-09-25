@@ -867,7 +867,7 @@ input[type="submit"] {
         background-color: #ffffff;
     }
 
-    .site-nav {
+    .site-header .site-nav {
         display: none;
     }
 
