@@ -96,6 +96,21 @@ a:hover {
     color: var(--color-stardust);
 }
 
+.text-link > .icon {
+    width: 20px;
+    height: 10px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+    margin-bottom: 1px;
+}
+
+.icon.icon-arrow {
+    background-image: url(../img/arrow-icon.svg);
+}
+
 .subtitle {
     font-family: 'beloved-sans', Poppins, sans-serif;
     font-weight: 700;
@@ -585,6 +600,12 @@ nav a:hover::before {
 
 .hotels .card a {
     font-size: 0.9rem;
+}
+
+.hotels .card .text-link > .icon {
+    width: 16px;
+    margin-bottom: 0;
+    margin-left: 5px;
 }
 
 /* RSVP Form */
