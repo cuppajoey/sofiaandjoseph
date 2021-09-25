@@ -19,7 +19,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', Helvetica, sans-serif;
+    font-family: Poppins, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 300;
     color: var(--color-dusk);
@@ -28,7 +28,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-dusk);
-    font-family: 'bely-display', serif;
+    font-family: bely-display, serif;
     margin: 1em 0 0.35em;
     line-height: 1.2;
 }
@@ -96,7 +96,7 @@ a:hover {
 }
 
 .subtitle {
-    font-family: 'beloved-sans', 'Poppins', sans-serif;
+    font-family: 'beloved-sans', Poppins, sans-serif;
     font-weight: 700;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -105,7 +105,7 @@ a:hover {
 }
 
 .body-display {
-    font-family: 'beloved-sans', 'Poppins', sans-serif;
+    font-family: 'beloved-sans', Poppins, sans-serif;
     font-weight: 700;
     font-size: 2.4375rem;
     letter-spacing: 5px;
@@ -117,7 +117,7 @@ a:hover {
 }
 
 .body-large {
-    font-family: 'beloved-sans', 'Poppins', sans-serif;
+    font-family: 'beloved-sans', Poppins, sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
     letter-spacing: 5px;
@@ -127,7 +127,7 @@ a:hover {
 }
 
 .font-body {
-    font-family: 'Poppins', Helvetica, sans-serif;
+    font-family: Poppins, Helvetica, sans-serif;
     font-weight: normal;
     margin-bottom: 0.5em;
 }
@@ -199,7 +199,7 @@ address {
     color: #ffffff;
     display: inline-block;
     padding: 1rem 2rem 0.6rem;
-    font-family: 'beloved-sans', 'Poppins', sans-serif;
+    font-family: 'beloved-sans', Poppins, sans-serif;
     font-size: 1.2rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -431,7 +431,7 @@ nav a:hover::before {
 .jdsc_digits {
     padding: 20px 40px;
     display: block;
-    font-family: 'bely-display', sans-serif;
+    font-family: bely-display, sans-serif;
     font-size: 6.875rem;
     margin: 0 5px;
     text-align: center;
