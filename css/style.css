@@ -639,7 +639,7 @@ input[type="submit"] {
     cursor: pointer;
     position: absolute;
     display: block;
-    top: 30px;
+    top: 35px;
     right: 25px;
 }
 #close-menu .bar {
@@ -863,6 +863,10 @@ input[type="submit"] {
         display: flex;
     }
 
+    body:not(.home) #menu-toggle .bar {
+        background-color: #ffffff;
+    }
+
     .site-nav {
         display: none;
     }
@@ -877,6 +881,7 @@ input[type="submit"] {
 
     .intro {
         padding: 35px 0;
+        text-align: left;
     }
 
     .faq {
