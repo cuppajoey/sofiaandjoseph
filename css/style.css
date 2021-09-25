@@ -785,24 +785,24 @@ input[type="submit"] {
 
 /* Animate mobile menu */
 .menu-open a {
-    -webkit-animation: fadeInUp 1s ease-in-out 0.25s 1 normal forwards;
-            animation: fadeInUp 1s ease-in-out 0.25s 1 normal forwards;
+    -webkit-animation: fadeInUp 1s ease-in-out 0s 1 normal forwards;
+            animation: fadeInUp 1s ease-in-out 0s 1 normal forwards;
 }
 .menu-open a:nth-child(2) {
+    -webkit-animation-delay: 0.25s;
+            animation-delay: 0.25s;
+}
+.menu-open a:nth-child(3) {
     -webkit-animation-delay: 0.5s;
             animation-delay: 0.5s;
 }
-.menu-open a:nth-child(3) {
+.menu-open a:nth-child(4) {
     -webkit-animation-delay: 0.75s;
             animation-delay: 0.75s;
 }
-.menu-open a:nth-child(4) {
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-}
 .menu-open img {
-    -webkit-animation: fadeIn 1s ease-in-out 1.75s 1 normal forwards;
-            animation: fadeIn 1s ease-in-out 1.75s 1 normal forwards;
+    -webkit-animation: fadeIn 1s ease-in-out 1.5s 1 normal forwards;
+            animation: fadeIn 1s ease-in-out 1.5s 1 normal forwards;
 }
 
 /* Animations */
