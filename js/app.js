@@ -82,6 +82,19 @@ plusOneRadios.forEach( radio => radio.addEventListener("change", () => {
     }
 }));
 
+let mealPreference = document.getElementById("meal-preference");
+let hasPlusOne = document.getElementById("has-plus-one");
+let isAttending = document.querySelectorAll('.is-attending');
+isAttending.forEach( radio => radio.addEventListener("change", () => {
+    if (radio.value === "yes") {
+        mealPreference.style.display = "block";
+        hasPlusOne.style.display = "block";
+    } else {
+        mealPreference.style.display = "none";
+        hasPlusOne.style.display = "none";
+    }
+}));
+
 // 
 // Handle contact form submissions
 // 

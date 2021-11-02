@@ -45,15 +45,6 @@
                     <form action="https://formspree.io/f/mknkyeqe" method="POST" id="rsvp-form" class="col-8 sm-col-12 col-start-3 sm-col-start-1">
                         <fieldset id="rsvp-form">
                             <legend>RSVP</legend>
-                            <div class="form-field radio-group">
-                                <span class="label-sm">Will you be attending our wedding?</span>
-                                <span class="radio-field">
-                                    <input type="radio" id="attending-yes" name="attending" value="yes" /> <label class="label-inline" for="attending-yes">Accepts with Pleasure</label>
-                                </span>
-                                <span class="radio-field">
-                                    <input type="radio" id="attending-no" name="attending" value="no" /> <label class="label-inline" for="attending-no">Declines with Regret</label>
-                                </span>
-                            </div>
                             <div class="grid">
                                 <div class="form-field">
                                     <label for="first-name" class="label-sm">First Name<sup>*</sup></label>
@@ -65,6 +56,15 @@
                                 </div>
                             </div>
                             <div class="form-field radio-group">
+                                <span class="label-sm">Will you be attending our wedding?</span>
+                                <span class="radio-field">
+                                    <input type="radio" id="attending-yes" class="is-attending" name="attending" value="yes" /> <label class="label-inline" for="attending-yes">Accepts with Pleasure</label>
+                                </span>
+                                <span class="radio-field">
+                                    <input type="radio" id="attending-no" class="is-attending" name="attending" value="no" /> <label class="label-inline" for="attending-no">Declines with Regret</label>
+                                </span>
+                            </div>
+                            <div id="meal-preference" class="form-field radio-group" style="display: none;">
                                 <span class="label-sm">Meal Preference</span>
                                 <span class="radio-field">
                                     <input type="radio" id="chicken" name="meal-preference" value="chicken" /> <label class="label-inline" for="chicken">Chicken</label>
@@ -73,7 +73,7 @@
                                     <input type="radio" id="vegetarian" name="meal-preference" value="vegetarian" /> <label class="label-inline" for="vegetarian">Vegetarian</label>
                                 </span>
                             </div>
-                            <div class="form-field radio-group">
+                            <div id="has-plus-one" class="form-field radio-group" style="display: none;">
                                 <span class="label-sm">Are you bringing a plus one?</span>
                                 <span class="radio-field">
                                     <input type="radio" id="plus-one-yes" class="plus-one" name="plus-one" value="yes"/> <label class="label-inline" for="plus-one-yes">Yes</label>
@@ -93,6 +93,15 @@
                                         <label for="guest-last-name" class="label-sm">Last Name<sup>*</sup></label>
                                         <input type="text" id="guest-last-name" name="guest-last-name"/>
                                     </div>
+                                </div>
+                                <div class="form-field radio-group">
+                                    <span class="label-sm">Meal Preference</span>
+                                    <span class="radio-field">
+                                        <input type="radio" id="chicken" name="guest-meal-preference" value="chicken" /> <label class="label-inline" for="chicken">Chicken</label>
+                                    </span>
+                                    <span class="radio-field">
+                                        <input type="radio" id="vegetarian" name="guest-meal-preference" value="vegetarian" /> <label class="label-inline" for="vegetarian">Vegetarian</label>
+                                    </span>
                                 </div>
                             </fieldset>
                         </fieldset>
