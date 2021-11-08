@@ -118,11 +118,11 @@ async function handleSubmit(event) {
         message = "Thank you for your RSVP! We're sorry you can't make it, but we understand!";
     }
 
-    if (! attending || !meal || !guest) {
-        status.innerHTML = "Please fill in the RSVP fields before submitting.";
-        status.style.display = "block";
-        return false;
-    }
+    // if (! attending || !meal || !guest) {
+    //     status.innerHTML = "Please fill in the RSVP fields before submitting.";
+    //     status.style.display = "block";
+    //     return false;
+    // }
     
     
     fetch(event.target.action, {
